@@ -33,7 +33,7 @@ df_test = pd.read_csv('data/churn_test.csv')
 
 ### Defining Churn
 
-Next, we needed to pull dates out of timestamps to  calculate the churn outcome variable. Users were identified as having churned if they had not used the ride-share service in the past thirty days. This function converts timestamps to date time objects and calculates our churn outcome variable:
+We converted dates into date time objects to calculate the churn outcome variable. Users were identified as having churned if they had not used the ride-share service in the past thirty days:
 
 ```python
 def convert_dates(df):
