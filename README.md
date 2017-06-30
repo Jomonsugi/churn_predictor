@@ -24,12 +24,12 @@ trips_in_first_30_days | Number of trips user took in first 30 days after signin
 luxury_car_user | TRUE if user took luxury car in first 30 days
 weekday_pct | Percent of user’s trips occurring during a weekday
 
-Data were provided in csv files, so it was simple to read into Pandas dataframes:
+<!-- Data  in csv files, so it was simple to read into Pandas dataframes:
 
 ```python
 df_train = pd.read_csv('data/churn_train.csv')
 df_test = pd.read_csv('data/churn_test.csv')
-```
+``` -->
 
 ### Defining Churn
 
