@@ -10,7 +10,7 @@ A ride-sharing company (Company X) is interested in predicting rider retention. 
 We have a mix of rider demographics, rider behavior, ride characteristics, and rider/driver ratings of each other. Data spanned a 7 month period.
 
 Variable     | Description                |
--------------| ------------------------------------------------ |
+-------------| ----------------------- |
 city | City this user signed up in
 phone | Primary device for this user
 signup_date |Date of account registration
@@ -90,6 +90,14 @@ def categorize_weekday_pct(df):
     df['all_weekend'] = (df.weekday_pct == 0).astype('int')
     df['mix_weekday_weekend'] = ((df.weekday_pct <100) & (df.weekday_pct > 0)).astype('int')
 ```
+
+## Predictive Analytics
+
+Random Forest is a great place to start with a classification problem like this. It's fast, easy to use, and pretty accurate right out of the box.
+
+To improve our model fit, we next tried some boosted classification models. While boosted models require more tuning (and therefore take a bit longer to get working than Random Forest), they are usually more accurate than Random Forest.
+1. Gradient boost
+2. XGBoost
 
 ## What We Learned
 
