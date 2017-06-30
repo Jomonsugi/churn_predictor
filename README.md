@@ -24,15 +24,15 @@ weekday_pct: the percent of the user’s trips occurring during a weekday
 ### Exploratory Data Analysis
 
 We discovered that some of the predictor variables (e.g., average distance, number of trips in first 30 days) were positively skewed to a rather marked degree. These variables also included zero values so it was not possible to use simple corrections for skew, such as log transform.
-![][https://user-images.githubusercontent.com/17363251/27752602-111d0122-5d9f-11e7-9dc0-d2fce2363102.png]
+![](https://user-images.githubusercontent.com/17363251/27752602-111d0122-5d9f-11e7-9dc0-d2fce2363102.png)
 
 We normalized skewed data using an inverse hyperbolic sine transformation.
 
-![][https://user-images.githubusercontent.com/17363251/27753738-0f4f5da4-5da4-11e7-8066-dac9a9af3307.png]
+![](https://user-images.githubusercontent.com/17363251/27753738-0f4f5da4-5da4-11e7-8066-dac9a9af3307.png)
 
 While examining distributions of the variables, we noticed that the percent of users' trips occurring during a weekday had an interesting distribution, with definite spikes for 0% and 100% and a more normal looking distribution for the space between 0 and 100.
 
-![][https://user-images.githubusercontent.com/17363251/27754012-5bf7456c-5da5-11e7-9a41-dff6fd296075.png]
+![](https://user-images.githubusercontent.com/17363251/27754012-5bf7456c-5da5-11e7-9a41-dff6fd296075.png)
 
 We decided to create dummy variables to split this variable apart:
     1. All rides on weekdays
