@@ -105,3 +105,7 @@ To improve our model fit, we next tried some boosted classification models. Whil
 
 ## Contributors
 Our team included Micah Shanks ([github.com/Jomonsugi](https://github.com/Jomonsugi)), Stuart King ([github.com/Stuart-D-King](https://github.com/Stuart-D-King), Jennifer Waller ([github.com/jw15](https://github.com/jw15)), and Ian
+
+## Tech Stack
+
+![](https://user-images.githubusercontent.com/17363251/27755513-51b86baa-5dad-11e7-81eb-b3b59f0f8b0a.png)
