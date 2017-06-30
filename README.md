@@ -103,6 +103,8 @@ To improve our model fit, we next tried some boosted classification models. Whil
 
 ### How useful is feature engineering and normalizing skewed data?
 
+Classifiers like random forest and boosted trees are quite robust to skewed and non-normally distributed data. We probably did not need to spend time transforming our data or creating dummy variables for percent of weekday rides.
+
 ## Contributors
 Our team included Micah Shanks ([github.com/Jomonsugi](https://github.com/Jomonsugi)), Stuart King ([github.com/Stuart-D-King](https://github.com/Stuart-D-King), Jennifer Waller ([github.com/jw15](https://github.com/jw15)), and Ian
 
