@@ -35,13 +35,12 @@ While examining distributions of the variables, we noticed that the percent of u
 ![](https://user-images.githubusercontent.com/17363251/27754012-5bf7456c-5da5-11e7-9a41-dff6fd296075.png)
 
 We decided to create dummy variables to split this variable apart:
+1. All rides on weekdays
+2. All rides on weekends
+3. Mix of weekdays and weekends
 
-    1. All rides on weekdays
-    2. All rides on weekends
-    3. Mix of weekdays and weekends
 
-
-```
+```python
 def categorize_weekday_pct(df):
     df['all_weekday'] = (df.weekday_pct == 100).astype('int')
     df['all_weekend'] = (df.weekday_pct == 0).astype('int')
