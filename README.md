@@ -1,11 +1,11 @@
-## Predicting Churn for Ride-Sharing Company
+# Predicting Churn for Ride-Sharing Company
 
-### Research Problem
+## Research Problem
 A ride-sharing company (Company X) is interested in predicting rider retention. Using data for rider activity, develop a model that identifies what factors are best predictors of retention. Also offer suggestions to operationalize insights to help Company X. The model should:
 1. Minimize error
 2. Facilitate interpretation of factors that contribute to the predictions.
 
-### Data
+## Data
 
 We have a mix of rider demographics, rider behavior, ride characteristics, and rider/driver ratings of each other. Data spanned a 7 month period.
 
@@ -22,7 +22,7 @@ surge_pct | Percent of trips taken with surge multiplier > 1
 avg_surge | Average surge multiplier over all of user’s trips
 trips_in_first_30_days | Number of trips user took in first 30 days after signing up
 luxury_car_user | TRUE if user took luxury car in first 30 days
-weekday_pct | Percent of user’s trips occurring during a weekday 
+weekday_pct | Percent of user’s trips occurring during a weekday
 
 Data were provided in csv files, so it was simple to read into Pandas dataframes:
 
@@ -31,7 +31,7 @@ df_train = pd.read_csv('data/churn_train.csv')
 df_test = pd.read_csv('data/churn_test.csv')
 ```
 
-#### Defining Churn
+### Defining Churn
 
 Next, we needed to pull dates out of timestamps to  calculate the churn outcome variable. Users were identified as having churned if they had not used the ride-share service in the past thirty days. This function converts timestamps to date time objects and calculates our churn outcome variable:
 
@@ -57,7 +57,7 @@ def label_encode(df, encode_list):
 ```
 
 
-### Exploratory Data Analysis
+## Exploratory Data Analysis
 
 We discovered that some of the predictor variables (e.g., average distance, number of trips in first 30 days) were positively skewed to a rather marked degree. These variables also included zero values so it was not possible to use simple corrections for skew, such as log transform.
 
@@ -91,9 +91,9 @@ def categorize_weekday_pct(df):
     df['mix_weekday_weekend'] = ((df.weekday_pct <100) & (df.weekday_pct > 0)).astype('int')
 ```
 
-### What We Learned
+## What We Learned
 
-#### How useful is feature engineering and normalizing skewed data?
+### How useful is feature engineering and normalizing skewed data?
 
-### Contributors
+## Contributors
 Our team included Micah Shanks ([github.com/Jomonsugi](https://github.com/Jomonsugi)), Stuart King ([github.com/Stuart-D-King](https://github.com/Stuart-D-King), Jennifer Waller ([github.com/jw15](https://github.com/jw15)), and Ian
