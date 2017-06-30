@@ -18,7 +18,8 @@ surge_pct: the percent of trips taken with surge multiplier > 1
 avg_surge: The average surge multiplier over all of this user’s trips
 trips_in_first_30_days: the number of trips this user took in the first 30 days after signing up
 luxury_car_user: TRUE if the user took a luxury car in their first 30 days; FALSE otherwise
-weekday_pct: the percent of the user’s trips occurring during a weekday```
+weekday_pct: the percent of the user’s trips occurring during a weekday
+```
 
 ### Exploratory Data Analysis
 
