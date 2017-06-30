@@ -91,7 +91,7 @@ def categorize_weekday_pct(df):
     df['mix_weekday_weekend'] = ((df.weekday_pct <100) & (df.weekday_pct > 0)).astype('int')
 ```
 
-## Predictive Analytics
+## Classification/Predictive Analytics
 
 Random Forest is a great place to start with a classification problem like this. It's fast, easy to use, and pretty accurate right out of the box.
 
