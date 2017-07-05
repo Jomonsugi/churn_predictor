@@ -1,9 +1,7 @@
-# Predicting Churn for Ride-Sharing Company
+# Predicting Churn for A Ride-Sharing Company
 
 ## Research Problem
-A ride-sharing company (Company X) is interested in predicting rider retention. Using data for rider activity, develop a model that identifies what factors are best predictors of retention. Also offer suggestions to operationalize insights to help Company X. The model should:
-1. Minimize error
-2. Facilitate interpretation of factors that contribute to the predictions.
+A ride-sharing company (Company X) is interested in predicting rider retention. Using data for rider activity, we developed a model that identifies what factors are best predictors of retention. We also offer suggestions to operationalize insights to help Company X.
 
 ## Data
 
@@ -57,7 +55,7 @@ def label_encode(df, encode_list):
 ```
 
 
-## Exploratory Data Analysis
+## Exploratory Data Analysis and Feature Engineering
 
 We discovered that some of the predictor variables (e.g., average distance, number of trips in first 30 days) were positively skewed to a rather marked degree. These variables also included zero values so it was not possible to use simple corrections for skew, such as log transform.
 
@@ -99,11 +97,25 @@ To improve our model fit, we next tried some boosted classification models. Whil
 1. Gradient boost
 2. XGBoost
 
+## Results
+
+Coming soon!
+<!-- Insert F1 scores and other stats for models here -->
+
+## Recommendations for Company X
+
+* Use the best fitting model (above) to obtain predicted probabilities for individuals. Target those with greater than some probability of churning (choose this cutoff by considering profit curve based on confusion matrix).
+
+* Offer discounts or free rides to at-risk users to try and retain them - no need to target users below a certain probability threshold.
+
+
 ## What We Learned
 
 ### How useful is feature engineering and normalizing skewed data?
 
 Classifiers like random forest and boosted trees are quite robust to skewed and non-normally distributed data. We probably did not need to spend time transforming our data or creating dummy variables for percent of weekday rides.
+
+<!-- However, some of the feature engineering seemed to yield improvements in model fit. Specifically, ... WHAT ENGINEERED FEATURES WERE USEFUL? -->
 
 ## Contributors
 Our team included Micah Shanks ([github.com/Jomonsugi](https://github.com/Jomonsugi)), Stuart King ([github.com/Stuart-D-King](https://github.com/Stuart-D-King)), Jennifer Waller ([github.com/jw15](https://github.com/jw15)), and Ian
