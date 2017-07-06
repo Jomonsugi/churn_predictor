@@ -97,15 +97,27 @@ To improve our model fit, we next tried some boosted classification models. Whil
 1. Gradient boost  
   - Using Scikit Learn's `GridSearchCV`, we first performed a grid search to determine the best model parameters for a `GradientBoostingClassifier`. The resultant classifier performed well, with an F1 Score of 83% on unseen data.
 2. XGBoost
+  - XGBoost did a good job as well with near equal results on the unseen data. The average F1 score from cross validation results was almost 84%.
 
 ## Results
 
-Coming soon!
-<!-- Insert F1 scores and other stats for models here -->
+Accuracy, recall, and precision on unseen data that XGBoost produced confirmed that it is a good choice as it generalizes well for this application.
+
+- Accuracy: 78.29%
+- Recall: 86.25%
+- Precision: 80.74%
+
+Although there could be possible improvements from further feature engineering, the current model would certainly be helpful in identifying customer segments that should be further investigated.
+
+By running a feature importance analysis on the XGBoost model, it is seems that surge percentage, average distance of ride, and number of trips taken in the first 30 days are all the most relevant predictive features in this model. Next steps would include comparing those who are predicted to churn and those who are not against these three features. This could lead to actionable insights and thus would be a priority of continuing work on this project.
+
+<!-- I ran feature importance on the XGBoost and found that surge_pct, avg_dist_norm, and trips_in_first_30_days are of most importance, but the why would take more project time that I do not have currently have. If I can find some time at any point, I think the only proper way to make any recommendations to company x would be to look at the distributions of those predicted to churn and those who are not against these three variables and then test for a statistical difference from there -->
 
 ## Recommendations for Company X
 
 * Use the best fitting model (above) to obtain predicted probabilities for individuals. Target those with greater than some probability of churning (choose this cutoff by considering profit curve based on confusion matrix).
+
+* Further investigate the variables stated above that are important predictors of churn
 
 * Offer discounts or free rides to at-risk users to try and retain them - no need to target users below a certain probability threshold.
 

@@ -54,6 +54,7 @@ def xg_train_predict():
     print("Precision: %.2f%%" % (precision * 100.0))
     f1 = f1_score(y_new, pred_new)
     print("f1: ",f1)
+    return bst
 
 if __name__ == '__main__':
-    xg_train_predict()
+    bst = xg_train_predict()
