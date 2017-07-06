@@ -91,10 +91,11 @@ def categorize_weekday_pct(df):
 
 ## Classification/Predictive Analytics
 
-Random Forest is a great place to start with a classification problem like this. It's fast, easy to use, and pretty accurate right out of the box.
+Random Forest is a great place to start with a classification problem like this. It's fast, easy to use, and pretty accurate right out of the box. Our Random Forest Classifier produced an F1 Score of 77% on unseen data.
 
 To improve our model fit, we next tried some boosted classification models. While boosted models require more tuning (and therefore take a bit longer to get working than Random Forest), they are usually more accurate than Random Forest.
-1. Gradient boost
+1. Gradient boost  
+  - Using Scikit Learn's `GridSearchCV`, we first performed a grid search to determine the best model parameters for a `GradientBoostingClassifier`. The resultant classifier performed well, with an F1 Score of 83% on unseen data.
 2. XGBoost
 
 ## Results
